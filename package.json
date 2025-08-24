@@ -2,7 +2,9 @@
   "dependencies": {
     "concurrently": "^9.2.0"
   },
-  "scripts": {
-  "both": "concurrently \"nodemon index.js  server\" \"npm run dev  client\""
+ "scripts": {
+  "server": "nodemon server/index.js --watch server",
+  "client": "npm run dev --prefix client",
+  "start": "concurrently \"npm run server\" \"npm run client\""
 }
 }
