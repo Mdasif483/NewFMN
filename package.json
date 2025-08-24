@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "concurrently": "^9.2.0"
+  },
+  "scripts": {
+  "both": "concurrently \"nodemon index.js  server\" \"npm run dev  client\""
+}
+}
