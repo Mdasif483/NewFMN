@@ -3,13 +3,14 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
+dotenv.config()
 
 const authRoutes = require("./Routes/auth");
 const noteRoutes = require("./Routes/notes");
 const connectToDB = require("./contect to db/dbconnect");
 
 const app = express();
-const PORT = 6969;
+const PORT = process.env.PORT || 6969;
 
 dotenv.config();
 app.use(cors());
